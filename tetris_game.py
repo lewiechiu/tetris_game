@@ -23,7 +23,7 @@ class Tetris(QMainWindow):
 
     def initUI(self):
         self.gridSize = 22
-        self.speed = 10
+        self.speed = 1
 
         self.timer = QBasicTimer()
         self.setFocusPolicy(Qt.StrongFocus)
@@ -40,7 +40,7 @@ class Tetris(QMainWindow):
 
         self.start()
 
-        self.center()
+        # self.center()
         self.setWindowTitle('Tetris')
         self.show()
 
@@ -64,6 +64,7 @@ class Tetris(QMainWindow):
 
         BOARD_DATA.createNewPiece()
         self.timer.start(self.speed, self)
+        
 
     def pause(self):
         if not self.isStarted:

@@ -28,7 +28,7 @@ class Shape(object):
         self.shape = shape
 
     def getRotatedOffsets(self, direction):
-        tmpCoords = Shape.shapeCoord[self.shape]
+        tmpCoords = self.shapeCoord[self.shape]
         if direction == 0 or self.shape == Shape.shapeO:
             return ((x, y) for x, y in tmpCoords)
 
